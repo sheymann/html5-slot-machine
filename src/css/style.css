@@ -2,7 +2,8 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 1rem;
-  background-image: url("../assets/bg.jpg");
+  /*background-image: url("../assets/bg.jpg");*/
+  background-color: #fbfbf7;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -13,7 +14,7 @@ body {
 
 @media only screen and (max-width: 1200px) {
   body {
-    background-image: url("../assets/bg_small.jpg");
+    /*background-image: url("../assets/bg_small.jpg");*/
   }
 }
 
@@ -40,6 +41,12 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
+.reel > .icons > img:first-child,
+.reel > .icons > img:last-child {
+  filter: blur(7px) opacity(0.7);
+  transition-duration: 0.5s;
+}
+
 #controls {
   background-color: rgba(255, 255, 255, 0.9);
   height: 50px;
@@ -59,13 +66,49 @@ body {
   margin-right: 5px;
 }
 
+button#spin {
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  background-color: #4c241d;
+}
+
+button#spin:disabled {
+  background-color: #ccc;
+}
+
+button#spin span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button#spin span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button#spin:hover span {
+  padding-right: 25px;
+}
+
+button#spin:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 input[type="checkbox"] {
   width: 40px;
   height: 40px;
 }
 
 #jackpot {
-  color: #d5ad6d;
+  color: #4c241d;
   font-size: 40px;
   text-align: center;
 }

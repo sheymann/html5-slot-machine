@@ -20,19 +20,22 @@ export default class Symbol {
 
   static get symbols() {
     return [
-      "at_at",
-      "c3po",
-      "darth_vader",
-      "death_star",
-      "falcon",
-      "r2d2",
-      "stormtrooper",
-      "tie_ln",
-      "yoda",
+      "002-dinosaur",
+      "014-dinosaur",
+      "003-dinosaur",
+      "015-pterodactyl",
+      "022-stegosaurus",
+      "023-tyrannosaurus rex",
+      "026-triceratops",
+      "itsagirl-dino", // boy/girl
     ];
   }
 
   static random() {
-    return this.symbols[Math.floor(Math.random() * this.symbols.length)];
+    return this.symbols[Math.floor(Math.random() * (this.symbols.length - 1))]; // exclude the last image
+  }
+
+  static getGender() {
+    return this.symbols[this.symbols.length - 1]; // idx of boy/girl
   }
 }

@@ -6,19 +6,19 @@ export default class Slot {
     Symbol.preload();
 
     this.currentSymbols = [
-      ["death_star", "death_star", "death_star"],
-      ["death_star", "death_star", "death_star"],
-      ["death_star", "death_star", "death_star"],
-      ["death_star", "death_star", "death_star"],
-      ["death_star", "death_star", "death_star"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
     ];
 
     this.nextSymbols = [
-      ["death_star", "death_star", "death_star"],
-      ["death_star", "death_star", "death_star"],
-      ["death_star", "death_star", "death_star"],
-      ["death_star", "death_star", "death_star"],
-      ["death_star", "death_star", "death_star"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
+      ["002-dinosaur", "002-dinosaur", "002-dinosaur"],
     ];
 
     this.container = domElement;
@@ -30,8 +30,6 @@ export default class Slot {
 
     this.spinButton = document.getElementById("spin");
     this.spinButton.addEventListener("click", () => this.spin());
-
-    this.autoPlayCheckbox = document.getElementById("autoplay");
 
     if (config.inverted) {
       this.container.classList.add("inverted");
@@ -47,7 +45,7 @@ export default class Slot {
       [Symbol.random(), Symbol.random(), Symbol.random()],
       [Symbol.random(), Symbol.random(), Symbol.random()],
       [Symbol.random(), Symbol.random(), Symbol.random()],
-      [Symbol.random(), Symbol.random(), Symbol.random()],
+      [Symbol.random(), Symbol.getGender(), Symbol.random()], // hardcode boy/girl
     ];
 
     return Promise.all(
@@ -68,8 +66,5 @@ export default class Slot {
     this.spinButton.disabled = false;
 
     console.log("SPIN END");
-
-    if (this.autoPlayCheckbox.checked)
-      return window.setTimeout(() => this.spin(), 200);
   }
 }
