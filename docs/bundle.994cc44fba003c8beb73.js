@@ -9,7 +9,7 @@
           });
         s.push([
           n.id,
-          'body {\r\n  width: 100vw;\r\n  height: 100vh;\r\n  padding: 1rem;\r\n  /*background-image: url("../assets/bg.jpg");*/\r\n  background-color: #FBFBF7;\r\n  background-size: cover;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  font-size: 24px;\r\n  font-family: "Roboto Condensed", sans-serif;\r\n}\r\n\r\n@media only screen and (max-width: 1200px) {\r\n  body {\r\n    /*background-image: url("../assets/bg_small.jpg");*/\r\n  }\r\n}\r\n\r\n#reels {\r\n  display: flex;\r\n  width: 100vw;\r\n  height: calc((3 / 5) * 100vw);\r\n  max-height: calc(90vh - 50px - 40px);\r\n  max-width: calc((5 / 3) * (90vh - 50px - 40px));\r\n}\r\n\r\n.reel {\r\n  overflow: hidden;\r\n  width: 20%;\r\n  height: 100%;\r\n}\r\n\r\n.reel > .icons > img {\r\n  width: calc(100% + 6px);\r\n  margin: -3px 0 0 -3px;\r\n  height: auto;\r\n\r\n  /* enable gpu accelaration, fixes iOS flicker */\r\n  transform: translate3d(0, 0, 0);\r\n}\r\n\r\n.reel > .icons > img:first-child,\r\n.reel > .icons > img:last-child {\r\n\tfilter: blur(7px) opacity(0.7);\r\n\ttransition-duration: 0.5s;\r\n}\r\n\r\n#controls {\r\n  background-color: rgba(255, 255, 255, 0.9);\r\n  height: 50px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 5px 30px;\r\n}\r\n\r\n#controls label {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0;\r\n}\r\n\r\n#controls label input {\r\n  margin-right: 5px;\r\n}\r\n\r\nbutton#spin {\r\n\tborder-radius: 12px;\r\n    border: none;\r\n    color: #fff;\r\n    background-color: #4C241D;\r\n}\r\n\r\nbutton#spin:disabled {\r\n\tbackground-color: #ccc;\r\n}\r\n\r\nbutton#spin span {\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  position: relative;\r\n  transition: 0.5s;\r\n}\r\n\r\nbutton#spin span:after {\r\n  content: \'\\00bb\';\r\n  position: absolute;\r\n  opacity: 0;\r\n  top: 0;\r\n  right: -20px;\r\n  transition: 0.5s;\r\n}\r\n\r\nbutton#spin:hover span {\r\n  padding-right: 25px;\r\n}\r\n\r\nbutton#spin:hover span:after {\r\n  opacity: 1;\r\n  right: 0;\r\n}\r\n\r\ninput[type="checkbox"] {\r\n  width: 40px;\r\n  height: 40px;\r\n}\r\n\r\n#jackpot {\r\n  color: #4C241D;\r\n  font-size: 40px;\r\n  text-align: center;\r\n}\r\n\r\n#slot.inverted .reel {\r\n  transform: scaleY(-1);\r\n}\r\n\r\n#slot.inverted .reel > .icons > img {\r\n  transform: scaleY(-1);\r\n}\r\n',
+          'body {\r\n  width: 100vw;\r\n  height: 100vh;\r\n  padding: 1rem;\r\n  /*background-image: url("../assets/bg.jpg");*/\r\n  background-color: #FBFBF7;\r\n  background-size: cover;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  font-size: 24px;\r\n  font-family: "Roboto Condensed", sans-serif;\r\n}\r\n\r\n@media only screen and (max-width: 1200px) {\r\n  body {\r\n    /*background-image: url("../assets/bg_small.jpg");*/\r\n  }\r\n}\r\n\r\n#reels {\r\n  display: flex;\r\n  /*width: 100vw;*/\r\n  height: calc((3 / 5) * 100vw);\r\n  max-height: calc(90vh - 50px - 40px);\r\n  max-width: calc((5 / 3) * (90vh - 50px - 40px));\r\n}\r\n\r\n.reel {\r\n  overflow: hidden;\r\n  width: 20%;\r\n  height: 100%;\r\n}\r\n\r\n.reel > .icons > img {\r\n  width: calc(100% + 6px);\r\n  margin: -3px 0 0 -3px;\r\n  height: auto;\r\n\r\n  /* enable gpu accelaration, fixes iOS flicker */\r\n  transform: translate3d(0, 0, 0);\r\n}\r\n\r\n.reel > .icons > img:first-child,\r\n.reel > .icons > img:last-child {\r\n\tfilter: blur(7px) opacity(0.7);\r\n\ttransition-duration: 0.5s;\r\n}\r\n\r\n#controls {\r\n  background-color: rgba(255, 255, 255, 0.9);\r\n  height: 50px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 5px 30px;\r\n}\r\n\r\n#controls label {\r\n  display: flex;\r\n  align-items: center;\r\n  margin: 0;\r\n}\r\n\r\n#controls label input {\r\n  margin-right: 5px;\r\n}\r\n\r\nbutton#spin {\r\n\tborder-radius: 12px;\r\n    border: none;\r\n    color: #fff;\r\n    background-color: #4C241D;\r\n}\r\n\r\nbutton#spin:disabled {\r\n\tbackground-color: #ccc;\r\n}\r\n\r\nbutton#spin span {\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  position: relative;\r\n  transition: 0.5s;\r\n}\r\n\r\nbutton#spin span:after {\r\n  content: \'\\00bb\';\r\n  position: absolute;\r\n  opacity: 0;\r\n  top: 0;\r\n  right: -20px;\r\n  transition: 0.5s;\r\n}\r\n\r\nbutton#spin:hover span {\r\n  padding-right: 25px;\r\n}\r\n\r\nbutton#spin:hover span:after {\r\n  opacity: 1;\r\n  right: 0;\r\n}\r\n\r\ninput[type="checkbox"] {\r\n  width: 40px;\r\n  height: 40px;\r\n}\r\n\r\n#jackpot {\r\n  color: #4C241D;\r\n  font-size: 40px;\r\n  text-align: center;\r\n}\r\n\r\n#slot.inverted .reel {\r\n  transform: scaleY(-1);\r\n}\r\n\r\n#slot.inverted .reel > .icons > img {\r\n  transform: scaleY(-1);\r\n}\r\n',
           "",
         ]);
         const o = s;
@@ -157,12 +157,12 @@
         t.r(r), t.d(r, { default: () => e });
         const e = t.p + "480283d1c9ab0d7268d3f5406549ffc3.svg";
       },
-      404: (n, r, t) => {
+      325: (n, r, t) => {
         "use strict";
         t.r(r), t.d(r, { default: () => e });
         const e = t.p + "99539edc62b63336eb01586e2e33647a.svg";
       },
-      157: (n, r, t) => {
+      404: (n, r, t) => {
         "use strict";
         t.r(r), t.d(r, { default: () => e });
         const e = t.p + "2a174758d723e5ab48d9387f383ad280.svg";
@@ -348,8 +348,8 @@
           "./020-pterodactyl.svg": 229,
           "./021-dinosaur.svg": 680,
           "./022-stegosaurus.svg": 380,
-          "./023-tyrannosaurus rex.svg": 404,
-          "./024-dinosaur.svg": 157,
+          "./023-tyrannosaurus-rex.svg": 325,
+          "./024-dinosaur.svg": 404,
           "./025-pterodactyl.svg": 545,
           "./026-triceratops.svg": 449,
           "./027-diplodocus.svg": 868,
@@ -474,12 +474,24 @@
                 key: "symbols",
                 get: function () {
                   return [
+                    "001-stegosaurus",
                     "002-dinosaur",
-                    "014-dinosaur",
                     "003-dinosaur",
+                    "014-dinosaur",
+                    "017-dinosaur",
+                    "018-dinosaur",
+                    "019-dinosaur",
+                    "024-dinosaur",
+                    "028-dinosaur",
+                    "029-dinosaur",
+                    "030-dinosaur",
+                    "013-pterodactyl",
                     "015-pterodactyl",
+                    "020-pterodactyl",
+                    "025-pterodactyl",
+                    "009-stegosaurus",
                     "022-stegosaurus",
-                    "023-tyrannosaurus rex",
+                    "023-tyrannosaurus-rex",
                     "026-triceratops",
                     "itsagirl-dino",
                   ];
@@ -540,7 +552,7 @@
                   filter: "blur(0)",
                 },
               ],
-              { duration: 1e3 * this.factor, easing: "ease-in-out" }
+              { duration: 2500 * this.factor, easing: "ease-in-out" }
             )),
             this.animation.cancel(),
             e.forEach(function (n) {
@@ -583,7 +595,7 @@
                     return (n.animation.onfinish = r);
                   }),
                   t = new Promise(function (r) {
-                    return setTimeout(r, 1e3 * n.factor);
+                    return setTimeout(r, 2500 * n.factor);
                   });
                 return (
                   this.animation.play(),
