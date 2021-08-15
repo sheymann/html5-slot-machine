@@ -20,12 +20,24 @@ export default class Symbol {
 
   static get symbols() {
     return [
+      "001-stegosaurus",
       "002-dinosaur",
-      "014-dinosaur",
       "003-dinosaur",
+      "014-dinosaur",
+      "017-dinosaur",
+      "018-dinosaur",
+      "019-dinosaur",
+      "024-dinosaur",
+      "028-dinosaur",
+      "029-dinosaur",
+      "030-dinosaur",
+      "013-pterodactyl",
       "015-pterodactyl",
+      "020-pterodactyl",
+      "025-pterodactyl",
+      "009-stegosaurus",
       "022-stegosaurus",
-      "023-tyrannosaurus rex",
+      "023-tyrannosaurus-rex",
       "026-triceratops",
       "itsagirl-dino", // boy/girl
     ];
